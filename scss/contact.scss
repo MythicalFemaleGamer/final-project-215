@@ -1,0 +1,107 @@
+.contact-container {
+  width: $nav-width;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  .contact-title {
+    width: 229px;
+    margin: 65px 0 65px 0;
+    h1 {
+      text-transform: uppercase;
+      font-family: $primary-font;
+      font-size: 25px;
+      letter-spacing: 2.5px;
+      font-weight: 100;
+      border-bottom: #000 2px solid;
+      padding-bottom: 11px;
+    }
+  }
+  .contact-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 50px 0;
+    margin-bottom: 171px;
+    .contact-form {
+      width: 529px;
+      height: 442px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-direction: column;
+      input {
+        width: 100%;
+        height: 60px;
+        background-color: #f5f5f5;
+        border: none;
+        padding: 0px 20px;
+        font-family: $primary-font;
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+      textarea {
+        width: 100%;
+        height: 200px;
+        background-color: #f5f5f5;
+        border: none;
+        padding: 20px;
+        font-family: $primary-font;
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+      button {
+        text-transform: uppercase;
+        width: 167px;
+        height: 60px;
+        background-color: $dark-pink;
+        border: none;
+        color: white;
+        font-family: $primary-font;
+        font-size: 16px;
+        letter-spacing: 1.6px;
+        line-height: 19px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .contact-map {
+      width: 400px;
+      height: 442px;
+    }
+  }
+}
+
+@media (max-width: 1018px) {
+  #app {
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    .contact-container {
+      width: 100%;
+      max-width: 100%;
+      .contact-title {
+        margin-left: 30px;
+      }
+      .contact-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .contact-form {
+          width: 80vw;
+          margin-bottom: 70px;
+        }
+        .contact-map {
+          width: 400px;
+          margin: 0 auto;
+          align-self: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

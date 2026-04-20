@@ -1,0 +1,119 @@
+.gallery-holder {
+  width: $nav-width;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  gap: 20px;
+  h1 {
+    text-transform: uppercase;
+    font-family: $primary-font;
+    font-size: 25px;
+    letter-spacing: 2.5px;
+    font-weight: 250;
+    border-bottom: #000 2px solid;
+    padding-bottom: 11px;
+    width: 229px;
+    margin: 46px 0 20px 0px;
+  }
+  .top-row {
+    height: 187px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    .g1 {
+      display: block;
+      width: 489px;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(255, 209, 64, 0.7)),
+        url(../images/galleryOne/1.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .g2 {
+      display: block;
+      width: 187px;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(238, 67, 103, 0.7)), url(../images/gallery2/2.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .g3 {
+      display: block;
+      width: 265px;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(8, 173, 105, 0.7)), url(../images/gallery4/3.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  .bottom-row {
+    height: 306px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 60px;
+
+    .g4 {
+      display: block;
+      width: 603px;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(84, 13, 110, 0.7)),
+        url(../images/GalleryThree/4.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .g5 {
+      display: block;
+      width: 355px;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(59, 206, 171, 0.7)),
+        url(../images/GalleryThree/5.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (max-width: 1018px) {
+  #app {
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .gallery-holder {
+      width: 100%;
+      max-width: 100%;
+      h1 {
+        margin: 20px 20px;
+      }
+      .top-row,
+      .bottom-row {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        .g1,
+        .g2,
+        .g3,
+        .g4,
+        .g5 {
+          height: 200px;
+        }
+      }
+    }
+  }
+}

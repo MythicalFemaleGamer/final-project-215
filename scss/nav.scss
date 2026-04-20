@@ -1,0 +1,129 @@
+nav.dark-nav {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+
+  border-bottom-color: #000;
+
+  .logo {
+    color: #000;
+    border-color: #000;
+  }
+
+  .nav-links a {
+    color: #000;
+    text-shadow: none;
+  }
+}
+
+nav {
+  width: $nav-width;
+  height: $nav-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  border-bottom: #fff 2px solid;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+
+  .logo {
+    width: $logo-width;
+    height: $logo-height;
+    color: #fff;
+    border: #fff 2px solid;
+    font-size: 20px;
+    font-family: $primary-font;
+    padding: 16px 12px 0 0;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+  }
+}
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  span {
+    color: $dark-pink;
+    font-size: 30px;
+    margin: 0 10px;
+  }
+  li a {
+    width: $nav-link-width;
+    font-family: $primary-font;
+    color: $purple;
+    text-decoration: none;
+    font-size: 15px;
+
+    &.active {
+      color: $dark-pink;
+    }
+    &:hover {
+      color: $purple;
+      text-decoration: underline;
+    }
+  }
+}
+#hamburger-icon {
+  display: none;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 2000;
+  cursor: pointer;
+
+  div {
+    width: 35px;
+    height: 3px;
+    background-color: $dark-pink;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .open .mobile-menu {
+    display: block;
+  }
+}
+
+.open {
+  .bar1 {
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+  .bar2 {
+    opacity: 0;
+  }
+  .bar3 {
+    transform: rotate(45deg) translate(-6px, -8px);
+  }
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 1018px) {
+  nav {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+}

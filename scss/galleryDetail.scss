@@ -1,0 +1,81 @@
+.gallery-detail-holder {
+  width: $nav-width;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin: 50px auto;
+  .food-festival-hero {
+    @include heroWithText;
+    background-image:
+      linear-gradient(rgba(255, 209, 64, 0.7)), url("../images/foodfest/1.png");
+    h1 {
+      color: $yellow;
+    }
+  }
+  .deejay-hero {
+    @include heroWithText;
+    background-image:
+      linear-gradient(rgba(238, 67, 103, 0.7)), url("../images/deepjay/2.png");
+    h1 {
+      color: $dark-pink;
+    }
+  }
+
+  .speech-hero {
+    @include heroWithText;
+    background-image:
+      linear-gradient(rgba($green, 0.7)), url("../images/speech/3.png");
+    h1 {
+      color: $green;
+    }
+  }
+
+  .openfoodfest-hero {
+    @include heroWithText;
+    background-image:
+      linear-gradient(rgba(84, 13, 110, 0.7)),
+      url("../images/GalleryThree/4.png");
+    h1 {
+      color: $purple;
+      font-size: 115px;
+    }
+  }
+
+  .international-hero {
+    @include heroWithText;
+    background-image:
+      linear-gradient(rgba(59, 206, 171, 0.7)),
+      url("../images/international/5.png");
+    h1 {
+      color: rgba(59, 206, 171, 1);
+      font-size: 115px;
+    }
+  }
+  .gallery-detail-text {
+    @include twoColumnText;
+  }
+}
+
+@media (max-width: 1018px) {
+  #app {
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .gallery-detail-holder {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 20px;
+    .food-festival-hero,
+    .deejay-hero,
+    .speech-hero,
+    .openfoodfest-hero,
+    .international-hero {
+      h1 {
+        width: 100%;
+      }
+    }
+  }
+}
