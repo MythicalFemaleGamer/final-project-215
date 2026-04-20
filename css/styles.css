@@ -332,17 +332,29 @@ ul li a:hover {
 #hamburger-icon {
   display: none;
   position: fixed;
-  top: 16px;
-  right: 16px;
+  top: 50px;
+  right: 46px;
   z-index: 2000;
   cursor: pointer;
 }
-#hamburger-icon div {
+#hamburger-icon .bars div {
   width: 35px;
   height: 3px;
-  background-color: #ee4367;
+  background-color: #540d6e;
   margin: 6px 0;
   transition: 0.4s;
+}
+#hamburger-icon .logo {
+  width: 92px;
+  height: 38px;
+  color: #ee4367;
+  border: #ee4367 2px solid;
+  font-size: 20px;
+  font-family: "gills-sans-regular", sans-serif;
+  padding: 16px 12px 0 0;
+  position: inherit;
+  top: 10px;
+  right: 16px;
 }
 #hamburger-icon .open .mobile-menu {
   display: block;
@@ -618,6 +630,7 @@ footer .copyWrite p {
   #app .gallery-holder {
     width: 100%;
     max-width: 100%;
+    padding: 40px 0;
   }
   #app .gallery-holder h1 {
     margin: 20px 20px;

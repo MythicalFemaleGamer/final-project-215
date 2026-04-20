@@ -78,17 +78,31 @@ ul {
 #hamburger-icon {
   display: none;
   position: fixed;
-  top: 16px;
-  right: 16px;
+  top: 50px;
+  right: 46px;
   z-index: 2000;
   cursor: pointer;
 
-  div {
+  .bars div {
     width: 35px;
     height: 3px;
-    background-color: $dark-pink;
+    background-color: $purple;
     margin: 6px 0;
     transition: 0.4s;
+  }
+
+  .logo {
+    width: $logo-width;
+    height: $logo-height;
+    color: $dark-pink;
+    border: $dark-pink 2px solid;
+    font-size: 20px;
+    font-family: $primary-font;
+
+    padding: 16px 12px 0 0;
+    position: inherit;
+    top: 10px;
+    right: 16px;
   }
 
   .open .mobile-menu {
@@ -127,3 +141,11 @@ ul {
     display: block;
   }
 }
+
+// .logo {
+//     display: block;
+//     position: fixed;
+//     top: 0;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
